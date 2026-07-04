@@ -131,6 +131,18 @@ SAFARI can run as a local web app. It reads EDF/BDF files from a mounted data
 folder, runs the LightGBM model, and writes CSV/NPZ predictions to an output
 folder.
 
+On macOS, the shortest path after cloning the repository is:
+
+```bash
+./scripts/safari_mac_start.sh
+```
+
+Put EDF/BDF files in `data/`, then open:
+
+```text
+http://127.0.0.1:8765
+```
+
 Run directly:
 
 ```bash
