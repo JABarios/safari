@@ -6,6 +6,7 @@
 - Train simple non-neural baselines.
 - Export models in portable formats.
 - Evaluate by held-out recordings, not random epochs.
+- Predict one new EDF and export CSV/NPZ hypnograms.
 
 ## V1
 
@@ -22,4 +23,3 @@
 - Multi-cortical and cortex-only profiles.
 - Optional hippocampus-aware profile.
 - Public dataset benchmarks across rat and mouse.
-

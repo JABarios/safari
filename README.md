@@ -34,6 +34,7 @@ diagnosis, human clinical use, or regulatory decision-making.
 scripts/safari_features.py           EDF -> epoch feature cache
 scripts/train_safari_centroid_v0.py  robust centroid baseline
 scripts/train_safari_lgbm_v0.py      LightGBM tabular model
+scripts/predict_safari_lgbm_v0.py    stage one EDF with a trained model
 docs/dataset_registry.csv            public/local dataset planning registry
 ```
 
@@ -86,6 +87,15 @@ python scripts/train_safari_lgbm_v0.py \
   --output-dir outputs/safari_v0
 ```
 
+Stage a new EDF with the LightGBM model:
+
+```bash
+python scripts/predict_safari_lgbm_v0.py /path/to/record.edf \
+  --model outputs/safari_v0/safari_lgbm_v0.txt \
+  --output-csv outputs/safari_v0/predictions/record.csv \
+  --output-npz outputs/safari_v0/predictions/record.npz
+```
+
 ## First Local Benchmark
 
 On the local Zenodo rat dataset cache, using 44 EDF recordings and a held-out
@@ -109,4 +119,3 @@ SAFARI should support capability profiles rather than hardcoded datasets:
 
 The browser version should eventually support review/correction, versioned
 models, channel maps, confidence/QC flags, and exportable annotations.
-
