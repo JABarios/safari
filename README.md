@@ -20,6 +20,7 @@ This repository is a V0 seed:
 - A robust centroid baseline exported as JSON.
 - A LightGBM tabular model exported as text.
 - Grouped train/test evaluation by recording.
+- A local browser app that can run directly or through Docker.
 
 No neural-network runtime is required for the deployed V0 models.
 
@@ -36,11 +37,33 @@ scripts/train_safari_centroid_v0.py  robust centroid baseline
 scripts/train_safari_lgbm_v0.py      LightGBM tabular model
 scripts/predict_safari_lgbm_v0.py    stage one EDF with a trained model
 scripts/serve_safari.py              local browser app
+Dockerfile                           local web app container
+docker-compose.yml                   example local Docker setup
+docs/how_to_continue.md              current project state and next steps
+docs/uam_docker_quickstart.md        short collaborator-facing Docker guide
 docs/dataset_registry.csv            public/local dataset planning registry
 ```
 
 Generated data, EDFs, feature caches, and models are intentionally ignored by
 git.
+
+## What To Do Next
+
+If you are developing SAFARI, start here:
+
+[docs/how_to_continue.md](docs/how_to_continue.md)
+
+If you want to give SAFARI to a collaborator who has Docker, start here:
+
+[docs/uam_docker_quickstart.md](docs/uam_docker_quickstart.md)
+
+The short version:
+
+1. Train or obtain `safari_lgbm_v0.txt`.
+2. Put EDF/BDF files in a data folder.
+3. Run the local browser app.
+4. Open `http://127.0.0.1:8765`.
+5. Stage a recording and download CSV/NPZ.
 
 ## Environment
 
@@ -143,6 +166,10 @@ For a local checkout using `docker compose`, place EDF/BDF files under
 ```bash
 docker compose up --build
 ```
+
+Important: the trained model is not committed to git. Models are generated
+artifacts and should be distributed separately or regenerated from the training
+data.
 
 ## First Local Benchmark
 

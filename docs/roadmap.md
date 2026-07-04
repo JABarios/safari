@@ -2,19 +2,22 @@
 
 ## V0
 
-- Build feature caches from public rodent EDF plus manual scoring.
-- Train simple non-neural baselines.
-- Export models in portable formats.
-- Evaluate by held-out recordings, not random epochs.
-- Predict one new EDF and export CSV/NPZ hypnograms.
+- [done] Build feature caches from public rodent EDF plus manual scoring.
+- [done] Train simple non-neural baselines.
+- [done] Export models in portable formats.
+- [done] Evaluate by held-out recordings, not random epochs.
+- [done] Predict one new EDF and export CSV/NPZ hypnograms.
+- [done] Run a local browser app directly and through Docker.
 
 ## V1
 
-- Add Valencia transfer evaluation.
-- Add explicit channel-map files.
-- Add postprocessing rules and confidence/QC outputs.
-- Freeze a first feature contract.
-- Port inference to C++.
+- [next] Add Valencia transfer evaluation.
+- [next] Add explicit channel-map files.
+- [next] Add postprocessing rules and confidence/QC outputs.
+- [next] Improve browser app with progress and a hypnogram plot.
+- [next] Package a first model artifact separately from git.
+- [next] Freeze a first feature contract.
+- [later] Port inference to C++.
 
 ## V2
 
