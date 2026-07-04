@@ -18,4 +18,3 @@ Homepage = "https://github.com/JABarios/safari"
 
 [tool.ruff]
 line-length = 120
-

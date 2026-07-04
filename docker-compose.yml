@@ -1,0 +1,22 @@
+services:
+  safari:
+    build: .
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./data:/data:ro
+      - ./models:/models:ro
+      - ./outputs:/outputs
+    command:
+      - python
+      - scripts/serve_safari.py
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8765"
+      - --data-dir
+      - /data
+      - --output-dir
+      - /outputs
+      - --model
+      - /models/safari_lgbm_v0.txt

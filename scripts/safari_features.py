@@ -22,6 +22,12 @@ CLASS_ORDER = np.array(["w", "n", "r"])
 EPS = np.finfo(np.float64).eps
 
 
+def integrate_trapezoid(y: np.ndarray, x: np.ndarray, axis: int) -> np.ndarray:
+    if hasattr(np, "trapezoid"):
+        return np.trapezoid(y, x, axis=axis)
+    return np.trapz(y, x, axis=axis)
+
+
 @dataclass(frozen=True)
 class ChannelMap:
     cortical: list[int]
@@ -140,7 +146,7 @@ def bandpower_from_epochs(epochs: np.ndarray, sfreq: float, bands: list[tuple[st
         if not np.any(mask):
             vals = np.zeros((n_ch, n_epochs), dtype=np.float64)
         else:
-            vals = np.trapz(psd[:, :, mask], freq[mask], axis=2)
+            vals = integrate_trapezoid(psd[:, :, mask], freq[mask], axis=2)
         feats.append(np.log(vals.T + EPS))
         names.extend([f"ch{idx}_{name}_logp" for idx in range(n_ch)])
     return np.column_stack(feats), names

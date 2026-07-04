@@ -35,6 +35,7 @@ scripts/safari_features.py           EDF -> epoch feature cache
 scripts/train_safari_centroid_v0.py  robust centroid baseline
 scripts/train_safari_lgbm_v0.py      LightGBM tabular model
 scripts/predict_safari_lgbm_v0.py    stage one EDF with a trained model
+scripts/serve_safari.py              local browser app
 docs/dataset_registry.csv            public/local dataset planning registry
 ```
 
@@ -94,6 +95,53 @@ python scripts/predict_safari_lgbm_v0.py /path/to/record.edf \
   --model outputs/safari_v0/safari_lgbm_v0.txt \
   --output-csv outputs/safari_v0/predictions/record.csv \
   --output-npz outputs/safari_v0/predictions/record.npz
+```
+
+## Local Browser App
+
+SAFARI can run as a local web app. It reads EDF/BDF files from a mounted data
+folder, runs the LightGBM model, and writes CSV/NPZ predictions to an output
+folder.
+
+Run directly:
+
+```bash
+python scripts/serve_safari.py \
+  --data-dir /path/to/edfs \
+  --model /path/to/safari_lgbm_v0.txt \
+  --output-dir outputs/local_app \
+  --host 127.0.0.1 \
+  --port 8765
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8765
+```
+
+Run with Docker:
+
+```bash
+docker build -t safari .
+docker run --rm -p 8765:8765 \
+  -v /path/to/edfs:/data:ro \
+  -v /path/to/model_dir:/models:ro \
+  -v /path/to/safari_outputs:/outputs \
+  safari
+```
+
+The model file is expected at:
+
+```text
+/models/safari_lgbm_v0.txt
+```
+
+For a local checkout using `docker compose`, place EDF/BDF files under
+`./data`, place the model at `./models/safari_lgbm_v0.txt`, and run:
+
+```bash
+docker compose up --build
 ```
 
 ## First Local Benchmark
