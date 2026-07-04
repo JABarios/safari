@@ -15,7 +15,8 @@
 - [next] Add explicit channel-map files.
 - [next] Add postprocessing rules and confidence/QC outputs.
 - [next] Improve browser app with progress and a hypnogram plot.
-- [next] Package a first model artifact separately from git.
+- [done] Add model artifact packaging docs/script.
+- [next] Publish a first model artifact as a GitHub release.
 - [next] Freeze a first feature contract.
 - [later] Port inference to C++.
 

@@ -181,8 +181,8 @@ Wake 47.2%, NREM 47.4%, REM 5.5%, mean confidence about 0.946
 
 ## Best Next Steps
 
-1. Add a tiny model/artifact release workflow:
-   package `safari_lgbm_v0.txt` separately from git.
+1. [in progress] Package `safari_lgbm_v0.txt` separately from git.
+   See `docs/model_artifacts.md`.
 2. Add explicit channel-map support:
    a small JSON file for cortical/hippocampus/EMG selection.
 3. Add Valencia transfer evaluation:
@@ -208,4 +208,3 @@ For a UAM collaborator, do not start with source-code training. Start with:
 
 Only after the workflow is useful should we ask them for manual corrections or
 new labeled datasets.
-

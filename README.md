@@ -41,6 +41,7 @@ Dockerfile                           local web app container
 docker-compose.yml                   example local Docker setup
 docs/how_to_continue.md              current project state and next steps
 docs/uam_docker_quickstart.md        short collaborator-facing Docker guide
+docs/model_artifacts.md              model packaging and release workflow
 docs/dataset_registry.csv            public/local dataset planning registry
 ```
 
@@ -56,6 +57,10 @@ If you are developing SAFARI, start here:
 If you want to give SAFARI to a collaborator who has Docker, start here:
 
 [docs/uam_docker_quickstart.md](docs/uam_docker_quickstart.md)
+
+If you need to package or publish the model artifact, start here:
+
+[docs/model_artifacts.md](docs/model_artifacts.md)
 
 The short version:
 
