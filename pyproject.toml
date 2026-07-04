@@ -1,0 +1,21 @@
+[project]
+name = "safari-sleep"
+version = "0.0.1"
+description = "Species-Agnostic Framework for Automated sleep scoRIng"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Juan A. Barios" }]
+dependencies = [
+  "numpy",
+  "pandas",
+  "mne",
+  "lightgbm",
+]
+
+[project.urls]
+Homepage = "https://github.com/JABarios/safari"
+
+[tool.ruff]
+line-length = 120
+

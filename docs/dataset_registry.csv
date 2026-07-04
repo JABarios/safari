@@ -1,0 +1,7 @@
+dataset_id,species,status,local_path,n_records,n_animals,raw_format,scoring,epoch_s,channels,has_hippocampus,has_emg,primary_role,source_url,notes
+zenodo_5227351_rat,rat,downloaded,/home/juan/data/data/valenc/external/rat_sleep_zenodo_5227351,44,10,EDF,manual,4,"EEG/LFP/EMG, varies by recording",yes,yes,train_core,https://zenodo.org/records/5227351,"Already converted for Spindle too, but SAFARI should use raw EDF plus manual scoring."
+valencia_pcs_bdl_ha,rat,local,/home/juan/data/valencia,177,,EDF,"historical MAT plus generated NPZ",4-10,"cx,hc,mg",yes,yes,translation_test,,Use for PCS/BDL/HA phenotype preservation and domain transfer validation.
+oxford_mouse_psg,mouse,candidate,,,"",archive,manual,4,"frontal EEG, parietal EEG, EMG; some LFP/MUA",sometimes,yes,train_or_stress_test,https://zenodo.org/records/10200482,Multiple expert scorers make it useful for scorer-variability tests.
+mssv_openneuro_mouse,mouse,candidate,,92,,OpenNeuro,manual,,"EEG/EMG",unknown,yes,stress_test,https://openneuro.org/datasets/ds006366,Multi-lab validation dataset; likely useful for generalization.
+mouse_ecog_emg_multilab_15322394,mouse,candidate,,,"",archive,manual,,"ECoG/EMG",no,yes,stress_test,https://zenodo.org/records/15322394,Potentially useful for cortex+EMG profiles.
+future_6_cortical_uam,rat,expected,,30,,unknown,manual_expected,,"six cortical electrodes; no HC initially",no,expected,collaboration_target,,Design profiles now so this dataset can plug in later.

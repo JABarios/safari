@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Local data and generated artifacts
+data/
+external/
+outputs/
+models/
+features/
+*.edf
+*.bdf
+*.hdf5
+*.npz
+*.mat
+*.pth
+*.tar
+*.zip
+
+# Local environment
+.venv/
+venv/
+.env
+
