@@ -18,6 +18,7 @@
 - [done] Add model artifact packaging docs/script.
 - [done] Publish a first model artifact as a GitHub release.
 - [next] Start Kappa core integration planning and parity tests.
+- [done] Add Python trace exporter for C++ parity tests.
 - [next] Freeze a first feature contract.
 - [later] Port inference to C++.
 

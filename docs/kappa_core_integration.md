@@ -191,7 +191,7 @@ This should mirror Kappa's existing `sleep_pipeline_audit` approach.
 
 1. Add `docs/kappa_core_integration.md` to SAFARI. [done]
 2. Add a tiny SAFARI Python trace exporter:
-   `scripts/dump_safari_trace.py`.
+   `scripts/dump_safari_trace.py`. [done]
 3. In Kappa, generalize `LgbmInfer` away from hardcoded 5-class human results.
 4. Add a C++ smoke test that loads `safari_lgbm_v0.txt` and predicts from a
    saved feature row.
@@ -203,4 +203,3 @@ This should mirror Kappa's existing `sleep_pipeline_audit` approach.
 
 SAFARI can continue to ship the Python/Docker V0 for collaboration and demos,
 but new inference/runtime work should be planned around Kappa core reuse.
-
