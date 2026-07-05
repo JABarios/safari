@@ -23,6 +23,8 @@ SAFARI currently has:
 It is separate from human sleep staging. It reuses engineering ideas from Kappa,
 but it is an animal research tool.
 
+`massai` is discarded and should not be used as a planning target.
+
 ## Important Local Paths
 
 Local Zenodo rat dataset:
@@ -181,19 +183,21 @@ Wake 47.2%, NREM 47.4%, REM 5.5%, mean confidence about 0.946
 
 ## Best Next Steps
 
-1. [in progress] Package `safari_lgbm_v0.txt` separately from git.
-   See `docs/model_artifacts.md`.
-2. Add explicit channel-map support:
+1. [done] Package `safari_lgbm_v0.txt` separately from git.
+   See `docs/model_artifacts.md` and the GitHub release `model-v0.0.1`.
+2. Start Kappa core integration:
+   see `docs/kappa_core_integration.md`.
+3. Add explicit channel-map support:
    a small JSON file for cortical/hippocampus/EMG selection.
-3. Add Valencia transfer evaluation:
+4. Add Valencia transfer evaluation:
    run SAFARI on `cx/hc/mg` Valencia EDFs and compare with existing `.npz`
    hypnograms and phenotype summaries.
-4. Add simple postprocessing:
+5. Add simple postprocessing:
    median smoothing, minimum bout duration, low-confidence flags.
-5. Improve the local web app:
+6. Improve the local web app:
    progress feedback, result table filtering, simple hypnogram plot, manual
    correction export.
-6. Start C++ planning:
+7. Start C++ planning:
    freeze feature names and generate a small fixture with expected feature
    values and predictions.
 

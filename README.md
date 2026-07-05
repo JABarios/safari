@@ -42,6 +42,7 @@ docker-compose.yml                   example local Docker setup
 docs/how_to_continue.md              current project state and next steps
 docs/uam_docker_quickstart.md        short collaborator-facing Docker guide
 docs/model_artifacts.md              model packaging and release workflow
+docs/kappa_core_integration.md       plan for reusing Kappa C++/WASM core
 docs/dataset_registry.csv            public/local dataset planning registry
 ```
 
@@ -61,6 +62,10 @@ If you want to give SAFARI to a collaborator who has Docker, start here:
 If you need to package or publish the model artifact, start here:
 
 [docs/model_artifacts.md](docs/model_artifacts.md)
+
+If you are planning the C++/WASM path, start here:
+
+[docs/kappa_core_integration.md](docs/kappa_core_integration.md)
 
 The short version:
 

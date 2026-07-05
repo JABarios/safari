@@ -16,7 +16,8 @@
 - [next] Add postprocessing rules and confidence/QC outputs.
 - [next] Improve browser app with progress and a hypnogram plot.
 - [done] Add model artifact packaging docs/script.
-- [next] Publish a first model artifact as a GitHub release.
+- [done] Publish a first model artifact as a GitHub release.
+- [next] Start Kappa core integration planning and parity tests.
 - [next] Freeze a first feature contract.
 - [later] Port inference to C++.
 
